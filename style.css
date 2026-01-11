@@ -88,6 +88,41 @@ section h2 {
     color: #222;
 }
 
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.education-card {
+    background: white;
+    padding: 25px;
+    border-left: 4px solid #00adb5;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateX(5px);
+}
+
+.edu-year {
+    font-size: 14px;
+    font-weight: bold;
+    color: #00adb5;
+}
+
+.edu-inst {
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.edu-grade {
+    font-size: 16px;
+    color: #00adb5;
+}
+
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -132,10 +167,25 @@ section h2 {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card::after {
+    content: "View on GitHub →";
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #00adb5;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .project-card:hover{
     transform: translateY(-5px);
+}
+
+.project-card:hover::after {
+    opacity: 1;
 }
 
 footer {

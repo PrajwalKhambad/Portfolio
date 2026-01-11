@@ -10,3 +10,10 @@ function toggleSkills(){
         skills.style.display = "none";
     }
 }
+
+document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const link = card.getAttribute("data-link");
+        window.open(link, "_blank");
+    });
+});
