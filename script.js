@@ -11,6 +11,13 @@ function toggleSkills(){
     }
 }
 
+document.querySelectorAll(".activity-card").forEach(card => {
+    card.addEventListener("click", () => {
+        const link = card.getAttribute("data-link1");
+        window.open(link, "_blank");
+    });
+});
+
 document.querySelectorAll(".project-card").forEach(card => {
     card.addEventListener("click", () => {
         const link = card.getAttribute("data-link");

@@ -88,6 +88,40 @@ section h2 {
     color: #222;
 }
 
+.activity {
+    margin-top: 22px;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.activity-card {
+    background: white;
+    padding: 18px;
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: tranform 0.3s ease;
+    cursor: pointer;
+    color: #00adb5;
+}
+
+.activity-card::after {
+    content: "🔗";
+    display: block;
+    font-size: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateX(5px);
+}
+
+.activity-card:hover::after {
+    opacity: 1;
+}
+
 .education-container {
     display: flex;
     flex-direction: column;
