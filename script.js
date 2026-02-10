@@ -18,9 +18,30 @@ document.querySelectorAll(".activity-card").forEach(card => {
     });
 });
 
+// document.querySelectorAll(".project-card").forEach(card => {
+//     card.addEventListener("click", () => {
+//         const link = card.getAttribute("data-link");
+//         window.open(link, "_blank");
+//     });
+// });
+
+
 document.querySelectorAll(".project-card").forEach(card => {
+
+    const github = card.dataset.github;
+    const demo = card.dataset.demo;
+
+    if (!demo) {
+        card.querySelector(".demo-link").style.display = "none";
+    }
+
     card.addEventListener("click", () => {
-        const link = card.getAttribute("data-link");
-        window.open(link, "_blank");
+        window.open(github, "_blank");
+    });
+
+    const demoLink = card.querySelector(".demo-link");
+    demoLink.addEventListener("click", (e) => {
+        e.stopPropagation();
+        window.open(demo, "_blank");
     });
 });

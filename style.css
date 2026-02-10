@@ -204,7 +204,28 @@ section h2 {
     cursor: pointer;
 }
 
-.project-card::after {
+.links {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.github-link {
+    color: #00adb5;
+    display: block;
+}
+
+.demo-link {
+    color: #ff9800;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .demo-link {
+    opacity: 1;
+}
+
+/* .project-card::after {
     content: "View on GitHub →";
     display: block;
     margin-top: 10px;
@@ -212,7 +233,7 @@ section h2 {
     color: #00adb5;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
+} */
 
 .project-card:hover{
     transform: translateY(-5px);
